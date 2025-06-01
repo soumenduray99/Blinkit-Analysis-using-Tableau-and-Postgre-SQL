@@ -1918,7 +1918,7 @@ from MOM_Tier4)
 select t1.months,t1.MOM_sales_Tier1,t2.MOM_sales_Tier2,t3.MOM_sales_Tier3,t4.MOM_sales_Tier4 from Tier1 as t1 join Tier2 as t2 on t1.months=t2.months
 join Tier3 as t3 on t3.months=t1.months join Tier4 as t4 on t4.months=t1.months order by t1.month_n ;  
 
--- 10.	How do delivery partner earnings vary by month (MOM) ?
+-- 9.	How do delivery partner earnings vary by month (MOM) ?
 with Delhivery as 
 (with MOM_Delhivery as (select months,month_n,
 sales_Delhivery, lag(sales_Delhivery,1,0) over () as pre_sales_Delhivery from 
